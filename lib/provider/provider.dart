@@ -1,7 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:googledocclone/constant.dart';
 import 'package:appwrite/appwrite.dart';
 import 'package:googledocclone/repositories/auth_repo.dart';
+import 'package:googledocclone/state/authstate.dart';
 
 final _clientProvider = Provider<Client>(
   (ref) => Client()
@@ -28,4 +30,9 @@ abstract class Dependency {
 
 abstract class Repository {
   static Provider<AuthRepository> get auth => AuthRepository.provider;
+}
+
+abstract class AppState {
+  static StateNotifierProvider<AuthService, Authstate> get authState =>
+      AuthService.provider;
 }
