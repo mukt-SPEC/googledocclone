@@ -1,5 +1,5 @@
 import 'package:appwrite/models.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:googledocclone/model/apperror.dart';
 import 'package:googledocclone/provider/provider.dart';

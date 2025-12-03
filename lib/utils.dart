@@ -1,5 +1,9 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:googledocclone/state/controller_state.dart';
+import 'package:googledocclone/state/statebase.dart';
 import 'package:logging/logging.dart';
+import 'package:riverpod/misc.dart';
 
 final Logger logger = Logger('AppLogger');
 
@@ -36,4 +40,29 @@ void setUpLogger() {
       debugPrint('StackTrace: ${record.stackTrace}');
     }
   });
+}
+
+extension RefX on WidgetRef {
+  void errorStateListener(
+    BuildContext context,
+    ProviderListenable<Statebase> provider,
+  ) {
+    listen<Statebase>(provider, (previous, next) {});
+  }
+
+  void errorControllerlistener(
+    BuildContext context,
+    ProviderListenable<ControllerState> provider,
+  ) {
+    listen<ControllerState>(provider, (previous, next) {
+      final message = next.error?.message;
+      if (next.error != previous!.error &&
+          message != null &&
+          message.isNotEmpty) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(message)));
+      }
+    });
+  }
 }
