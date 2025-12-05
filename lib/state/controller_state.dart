@@ -7,7 +7,7 @@ class ControllerState extends Equatable {
   const ControllerState({this.error});
 
   @override
-  List<Object> get props => [?error];
+  List<Object?> get props => [?error];
 
   ControllerState copyWith({AppError? error}) {
     return ControllerState(error: error ?? this.error);
