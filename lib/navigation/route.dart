@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:googledocclone/components/auth/documents/document.dart';
+import 'package:googledocclone/components/auth/documents/document_page.dart';
 import 'package:googledocclone/components/auth/documents/new_document_page.dart';
 import 'package:routemaster/routemaster.dart';
 
