@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 const _menuTextStyle = TextStyle(fontSize: 20);
 
-class MenuBar extends StatelessWidget {
-  const MenuBar({
+class AppMenuBar extends StatelessWidget {
+  const AppMenuBar({
     super.key,
     this.leading = const [],
     this.trailing = const [],
