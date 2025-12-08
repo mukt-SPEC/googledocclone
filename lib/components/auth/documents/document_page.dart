@@ -8,6 +8,7 @@ import 'package:googledocclone/components/auth/documents/widget/menu_bar.dart';
 import 'package:googledocclone/navigation/route.dart';
 import 'package:googledocclone/provider/provider.dart';
 import 'package:routemaster/routemaster.dart';
+import 'package:tuple/tuple.dart';
 
 class DocumentPage extends ConsumerStatefulWidget {
   final String? documentId;
@@ -111,8 +112,9 @@ class __DocumentEditorWidgetState extends ConsumerState<_DocumentEditorWidget> {
                         height: 1.15,
                         fontWeight: FontWeight.w600,
                       ),
-                      const Tuple2(32, 28),
-                      const Tuple2(0, 0),
+                      HorizontalSpacing(32, 24),
+                      VerticalSpacing(0, 0),
+                      VerticalSpacing(0, 0),
                       null,
                     ),
                     h2: DefaultTextBlockStyle(
@@ -121,8 +123,9 @@ class __DocumentEditorWidgetState extends ConsumerState<_DocumentEditorWidget> {
                         color: Colors.black,
                         fontWeight: FontWeight.w600,
                       ),
-                      const Tuple2(28, 24),
-                      const Tuple2(0, 0),
+                      HorizontalSpacing(28, 24),
+                      VerticalSpacing(0, 0),
+                      VerticalSpacing(0, 0),
                       null,
                     ),
                     h3: DefaultTextBlockStyle(
@@ -131,8 +134,9 @@ class __DocumentEditorWidgetState extends ConsumerState<_DocumentEditorWidget> {
                         color: Colors.grey[800],
                         fontWeight: FontWeight.w600,
                       ),
-                      const Tuple2(18, 14),
-                      const Tuple2(0, 0),
+                      HorizontalSpacing(18, 14),
+                      VerticalSpacing(0, 0),
+                      VerticalSpacing(0, 0),
                       null,
                     ),
                     paragraph: DefaultTextBlockStyle(
@@ -141,8 +145,9 @@ class __DocumentEditorWidgetState extends ConsumerState<_DocumentEditorWidget> {
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
-                      const Tuple2(2, 0),
-                      const Tuple2(0, 0),
+                      HorizontalSpacing(2, 0),
+                      VerticalSpacing(0, 0),
+                      VerticalSpacing(0, 0),
                       null,
                     ),
                   ),
