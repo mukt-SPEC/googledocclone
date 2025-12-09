@@ -49,6 +49,28 @@ class _DocumentPageState extends ConsumerState<DocumentPage> {
   }
 }
 
+class _TitleTextEditor extends ConsumerStatefulWidget {
+  const _TitleTextEditor({required this.documentId, super.key});
+
+  final String documentId;
+
+  @override
+  ConsumerState<ConsumerStatefulWidget> createState() =>
+      __TitleTextEditorState();
+}
+
+final _documentTitleProvider = Provider.family<String?, String>((ref, id){
+  return ;
+});
+
+class __TitleTextEditorState extends ConsumerState<_TitleTextEditor> {
+  final TextEditingController _textEditingController = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class _DocumentEditorWidget extends ConsumerStatefulWidget {
   const _DocumentEditorWidget({required this.documentId, super.key});
 
